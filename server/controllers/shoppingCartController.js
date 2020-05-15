@@ -4,7 +4,7 @@ const { User } = require("../models/shoppingCart");
 const shoppingCartController = {};
 
 shoppingCartController.createUser = (req, res, next) => {
-
+  console.log('req body is ***', req.body)
   const user = new User(req.body);
   //mongoose command to put this instance of User into db
   const newUser = User.create(user, (err, newUser) => {

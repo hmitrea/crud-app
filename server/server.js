@@ -1,20 +1,20 @@
-const path = require('path')
-const express = require('express');
+const path = require("path");
+const express = require("express");
 const app = express();
+const port = 3000;
 
-const PORT = 3000;
+app.get("/", (req, res) => res.render("./../client/index"));
 
-app.use(express.json())
+app.post("/signup", (req, res) => res.send("sign up successful"));
 
-
-app.get('/', (req, res) => {
-  res.render('./index.html')
-})
-
-app.get('/signup', (req, res) => {
-    res.redirect('/signup')
-})
-
-app.listen(3000, () => console.log(`listening on PORT ${PORT}`))
+app.put("/api/shoppingCart", (req, res) => res.send("successful put request"));
+app.post("/api/shoppingCart", (req, res) =>
+  res.send("successful post request")
+);
+app.delete("/api/shoppingCart", (req, res) =>
+  res.send("successful delete request")
+);
+app.get("/api/shoppingCart", (req, res) => res.send("successful get request"));
+app.listen(port, () => console.log(`server listening on port ${port}`));
 
 module.exports = app;

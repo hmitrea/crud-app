@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => res.render("./../client/index"));
+app.get("/", (req, res) => res.sendFile(path.resolve(__dirname, "../client/index.html")));
 
 app.post("/signup", (req, res) => res.send("sign up successful"));
 

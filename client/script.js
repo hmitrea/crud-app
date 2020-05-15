@@ -23,19 +23,28 @@ function createListElement(){
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
     input.value = "";
+    addListToDatabase();
 }
 
 // asking to make a put request
 function addListToDatabase(){
-    fetch('URL HERE', {
-           method: 'PUT',
-           headers: {
-               "content-type": "text/html"
-           },
-        //    body: JSON.stringify(data)
+
+    console.log("addListToDatabase");
+    const formData = {};
+    formData.append('username', 'abc123');
+    formData.append('avatar', fileField.files[0]);
+
+    fetch('http://localhost:3000/api/shoppingCart', {
+        method: 'PUT',
+        body: formData
     })
-        .then(res => res.json())
-        .then(data => )
+    .then(response => response.json())
+    .then(result => {
+        console.log('Success:', result);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 
 
 }

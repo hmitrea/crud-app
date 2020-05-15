@@ -25,6 +25,20 @@ function createListElement(){
     input.value = "";
 }
 
+// asking to make a put request
+function addListToDatabase(){
+    fetch('URL HERE', {
+           method: 'PUT',
+           headers: {
+               "content-type": "text/html"
+           },
+        //    body: JSON.stringify(data)
+    })
+        .then(res => res.json())
+        .then(data => )
+
+
+}
 
 function addListAfterClick(){
     if (inputLength() > 0){

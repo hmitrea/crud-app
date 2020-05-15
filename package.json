@@ -4,6 +4,7 @@
   "description": "read update and create application",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Red-Lipped-Batfish/crud-app/issues"
   },
-  "homepage": "https://github.com/Red-Lipped-Batfish/crud-app#readme"
+  "homepage": "https://github.com/Red-Lipped-Batfish/crud-app#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }

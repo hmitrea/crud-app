@@ -5,7 +5,12 @@
 // })
 
 
-var button = document.getElementById("enter");
+{/* <button id="add">Add</button>
+<button id="delete">Delete</button>
+<button id="update">Update</button>
+<button id="get">Get</button> */}
+
+var addButton = document.getElementById("add");    
 var input = document.getElementById("userInput");
 var ul = document.querySelector("ul");
 
@@ -33,5 +38,5 @@ function addListAfterKeyPress(){
     }
 }
 
-button.addEventListener("click",addListAfterClick);
+addButton.addEventListener("click",addListAfterClick);
 input.addEventListener("keypress",addListAfterKeyPress);

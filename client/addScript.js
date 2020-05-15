@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // var button = document.getElementsByTagName("button")[0];
 
 // button.addEventListener("click", function(){
@@ -31,8 +33,7 @@ function addListToDatabase(){
 
     console.log("addListToDatabase");
     const formData = {};
-    formData.append('username', 'abc123');
-    formData.append('avatar', fileField.files[0]);
+    formData.username = 'abc123';
 
     fetch('http://localhost:3000/api/shoppingCart', {
         method: 'PUT',
